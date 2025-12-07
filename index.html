@@ -33,68 +33,73 @@ fontFamily: {
 </script>
 <style>
 body {
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* **AJUSTE FINAL**: O espaço reservado para a nav fixa agora é de 3rem */
+:target {
+    scroll-margin-top: 3rem; 
 }
 
 .font-display {
-font-family: 'Poppins', sans-serif;
-font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
 }
 
 .text-yellow {
-color: #E6A500;
+    color: #E6A500;
 }
 
 .bg-yellow {
-background-color: #E6A500;
+    background-color: #E6A500;
 }
 
 .pulse-glow {
-animation: pulse-glow 2s ease-in-out infinite alternate;
+    animation: pulse-glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes pulse-glow {
-from { box-shadow: 0 0 20px rgba(230, 165, 0, 0.4); }
-to { box-shadow: 0 0 30px rgba(230, 165, 0, 0.8); }
+    from { box-shadow: 0 0 20px rgba(230, 165, 0, 0.4); }
+    to { box-shadow: 0 0 30px rgba(230, 165, 0, 0.8); }
 }
 
 .card-hover {
-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .card-hover:hover {
-transform: translateY(-8px);
-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .smooth-scroll {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .animate-float {
-animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
-0%, 100% { transform: translateY(0px); }
-50% { transform: translateY(-15px); }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
 
 .glass-effect {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .section-padding {
-padding: 5rem 0;
+    padding: 5rem 0;
 }
 
 .container-custom {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 </style>
 </head>
@@ -178,45 +183,52 @@ Beatriz
 Consultoria de Viagem • Criação de Conteúdo <br> Escrita criativa • Gestão
 </p>
 
-<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-    
-    <a href="#servicos" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-purple transition-all duration-300 transform hover:scale-105">
-        Descobrir Serviços
-    </a>
-    
-    <a href="https://instagram.com/primosnomade" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-purple transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-        <img src="icones/instagram.png" alt="Instagram" class="w-5 h-5">
-        Seguir no Instagram
-    </a>
+<div class="flex flex-col gap-4 justify-center items-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full">
+        <a href="#produtos" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-purple transition-all duration-300 transform hover:scale-105 text-center">
+            Ver Produtos
+        </a>
+        <a href="#servicos" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-purple transition-all duration-300 transform hover:scale-105 text-center">
+            Descobrir Serviços
+        </a>
+    </div>
 
-    <a href="https://api.whatsapp.com/send?phone=5511997626079&text=Oi%20Bea!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" class="bg-whatsapp-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.309"/>
-        </svg>
-        Falar no WhatsApp
-    </a>
-</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl w-full">
+        <a href="https://instagram.com/primosnomade" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-purple transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <img src="icones/instagram.png" alt="Instagram" class="w-5 h-5">
+            Seguir no Instagram
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5511997626079&text=Oi%20Bea!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" class="bg-whatsapp-green text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.309"/>
+            </svg>
+            Falar no WhatsApp
+        </a>
+    </div>
 </div>
 </div>
 </section>
 
-<section id="sobre" class="py-16 bg-brand-cream">
-    <div class="container-custom">
+<section id="sobre" class="py-16 bg-brand-cream"> <div class="container-custom">
         
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Sobre Mim</h2>
             <div class="w-24 h-1 bg-brand-purple mx-auto rounded-full"></div>
         </div>
         
-        <div class="max-w-4xl mx-auto text-center mb-12">
-            <p class="text-brand-text text-lg leading-relaxed mx-auto">
-                Formada em Gestão de Turismo e credenciada como Guia de Turismo Regional, Nacional 🇧🇷 e América do Sul, atuo nas áreas de Comunicação e Gestão atendendo a diferentes segmentos, mas minha especialização e principal foco estão em marcas e projetos de Turismo, Entretenimento e Lazer, onde conecto minha formação e experiência.
+        <div class="max-w-4xl mx-auto text-center mb-10"> 
+            <p class="text-brand-text text-lg leading-relaxed mx-auto mb-4">
+                Olá! Eu sou a Beatriz :)
+            </p>
+
+            <p class="text-brand-text text-lg leading-relaxed mx-auto mb-4">
+                Tenho 25 anos, sou formada em Gestão de Turismo e Guia de Turismo, em âmbito Regional, Nacional 🇧🇷 e América do Sul. Atuo principalmente nas áreas de Comunicação e Gestão, onde conecto minha formação, experiência e paixão.
             </p>
         </div>
         
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             
-            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center">
+            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center card-hover">
                 <div class="flex items-center justify-center mb-4">
                     <span class="text-xl text-brand-purple mr-3">🎓</span>
                     <h4 class="text-xl font-bold text-brand-purple">Formação</h4>
@@ -226,63 +238,75 @@ Consultoria de Viagem • Criação de Conteúdo <br> Escrita criativa • Gest�
                         Gestão de Turismo
                     </span>
                     <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
-                        Guia Regional, 🇧🇷 e América do Sul
+                        Guia Regional, Nacional 🇧🇷 e América do Sul
                     </span>
                 </div>
             </div>
             
-            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center">
-                <div class="flex items-center justify-center mb-4">
-                    <span class="text-xl text-brand-purple mr-3">🎯</span>
-                    <h4 class="text-xl font-bold text-brand-purple">Foco no Mercado</h4>
-                </div>
-                <div class="flex flex-col gap-2 items-center">
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
-                        Turismo, Entretenimento e Lazer
-                    </span>
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
-                        Audiovisual
-                    </span>
-                </div>
-            </div>
+            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center card-hover">
+    <div class="flex items-center justify-center mb-4">
+        <span class="text-xl text-brand-purple mr-3">🎯</span>
+        <h4 class="text-xl font-bold text-brand-purple">Foco no Mercado</h4>
+    </div>
+    <div class="flex flex-row flex-wrap gap-1 justify-center items-center">
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
+            Turismo, Entretenimento e Lazer
+        </span>
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
+            Audiovisual
+        </span>
+        
+        <div class="w-full h-0"></div>
+        
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
+            Marketing
+        </span>
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
+            Publicidade e Propaganda
+        </span>
+    </div>
+</div>
             
-            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center">
+            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center card-hover">
                 <div class="flex items-center justify-center mb-4">
                     <span class="text-xl text-brand-purple mr-3">💼</span>
                     <h4 class="text-xl font-bold text-brand-purple">Área de Atuação</h4>
                 </div>
                 <div class="flex flex-col gap-2 items-center">
                     <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
-                        Comunicação/Escrita
+                        Comunicação
                     </span>
-<span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
+                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
                         Gestão
                     </span>
                 </div>
             </div>
             
-            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center">
-                <div class="flex items-center justify-center mb-4">
-                    <span class="text-xl text-brand-purple mr-3">⭐</span>
-                    <h4 class="text-xl font-bold text-brand-purple">Interesses</h4>
-                </div>
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
-                        Nomadismo
-                    </span>
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
-                        Cultura Pop
-                    </span>
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
-                        Filmes & séries
-                    </span>
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
-                        Comunicação/Escrita
-                    </span>
-                    <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
-                        Gastronomia
-                    </span>
-                </div>
+            <div class="p-5 bg-white rounded-xl shadow-md border border-brand-purple/10 text-center card-hover">
+    <div class="flex items-center justify-center mb-4">
+        <span class="text-xl text-brand-purple mr-3">⭐</span>
+        <h4 class="text-xl font-bold text-brand-purple">Interesses</h4>
+    </div>
+    <div class="flex flex-wrap gap-1 justify-center">
+        
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
+            Nomadismo
+        </span>
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
+            Cultura Pop
+        </span>
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
+            Filmes & Séries
+        </span>
+        
+        <div class="w-full h-0"></div> <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50 w-fit">
+            Tecnologia
+        </span>
+        <span class="bg-brand-cream text-brand-text px-3 py-1 rounded-full font-medium text-sm transition-all duration-300 border border-brand-purple/50">
+            Gastronomia
+        </span>
+    </div>
+</div>
             </div>
             
         </div>
@@ -367,132 +391,156 @@ Consultoria de Viagem • Criação de Conteúdo <br> Escrita criativa • Gest�
 </section>
 
 <section id="servicos" class="section-padding bg-brand-cream">
-<div class="container-custom">
-<div class="text-center mb-16">
-<h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Meus Serviços</h2>
-<p class="text-xl text-brand-text/70 max-w-3xl mx-auto font-medium">Soluções completas para atender suas necessidades e otimizar seus resultados. </p>
-<div class="w-24 h-1 bg-brand-purple mx-auto mt-6 rounded-full"></div>
-</div>
-
-<div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-3xl card-hover shadow-lg border border-brand-purple/10">
-<div class="w-16 h-16 bg-brand-purple rounded-2xl flex items-center justify-center text-white text-2xl mb-6 pulse-glow">
-✈️
-</div>
-<h3 class="text-xl font-bold text-brand-purple mb-4">Turismo & Viagens</h3>
-<h4 class="font-semibold mb-3 text-brand-text">1️⃣ Consultoria de Viagem</h4>
-<p class="text-brand-text/80 mb-4 leading-relaxed">Planejamento completo e assistência do início ao fim. Inclui roteiro personalizado alinhado às suas preferências, Guia Digital exclusivo (roteiro detalhado, checklist de viagem, informações culturais, dicas, logística e cotações de voos/reservas) e suporte virtual antes e durante a sua viagem. </p>
-<ul class="text-brand-text/80 space-y-2">
-</ul>
-</div>
-
-<div class="bg-white p-8 rounded-3xl card-hover shadow-lg lg:col-span-1 border border-brand-purple/10">
-<div class="w-16 h-16 bg-brand-purple rounded-2xl flex items-center justify-center text-white text-2xl mb-6 pulse-glow">
-✍️
-</div>
-<h3 class="text-xl font-bold text-brand-purple mb-4 font-display">Comunicação & Conteúdo</h3>
-<div class="space-y-4">
-<div>
-<h5 class="font-semibold text-brand-text mb-1">2️⃣ Redação, Revisão & Edição</h5>
-<p class="text-brand-text/80">Criação e aperfeiçoamento de textos com foco na qualidade.</p>
-</div>
-<div>
-<h5 class="font-semibold text-brand-text mb-1">3️⃣ Transcrição de Áudio</h5>
-<p class="text-brand-text/80">Conversão precisa de áudio para texto.</p>
-</div>
-<div>
-<h5 class="font-semibold text-brand-text mb-1">4️⃣ Tradução EN/PT</h5>
-<p class="text-brand-text/80">Tradução de textos mantendo o contexto original.</p>
-</div>
-<div>
-<h5 class="font-semibold text-brand-text mb-1">5️⃣ Roteiros para Audiovisual</h5>
-<p class="text-brand-text/80">Criação de roteiros e storytelling criativo para diferentes formatos de vídeo e narrativa.</p>
-<span class="bg-brand-purple text-white text-xs px-2 py-1 rounded-full font-bold mt-2 inline-block">Em desenvolvimento</span>
-</div>
-<div>
-<h5 class="font-semibold text-brand-text mb-1">6️⃣ Copywriting</h5>
-<p class="text-brand-text/80">Textos persuasivos e estratégicos usando técnicas de SEO para impulsionar seu alcance.</p>
-<span class="bg-brand-purple text-white text-xs px-2 py-1 rounded-full font-bold mt-2 inline-block">Em desenvolvimento</span>
-</div>
-<div>
-</div>
-</div>
-</div>
-
-<div class="bg-white p-8 rounded-3xl card-hover shadow-lg lg:col-span-1 lg:mx-auto border border-brand-purple/10">
-    <div class="w-16 h-16 bg-brand-purple rounded-2xl flex items-center justify-center text-white text-2xl mb-6 pulse-glow">
-        🧑‍💼
-    </div>
-    <h3 class="text-xl font-bold text-brand-purple mb-4">Gestão & Relacionamento</h3>
-    <div class="space-y-4">
-        <div>
-            <h5 class="font-semibold text-brand-text mb-1">7️⃣ Assistência Virtual</h5>
-            <p class="text-brand-text/80">Gestão das suas demandas administrativas, permitindo que você foque no que realmente importa.</p>
-        </div>
-        <div>
-            <h5 class="font-semibold text-brand-text mb-1">8️⃣ Gestão de Comunidade</h5>
-            <p class="text-brand-text/80">Gestão das interações da sua marca nas redes sociais, fortalecendo o engajamento e a presença digital do seu negócio.</p>
-        </div>
-        <div>
-            <h5 class="font-semibold text-brand-text mb-1">9️⃣ Atendimento ao Cliente</h5>
-            <p class="text-brand-text/80">Atendimento humanizado, personalizado e eficiente para seus clientes através de canais online.</p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="ferramentas" class="section-padding bg-white">
     <div class="container-custom">
         
         <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Minhas Ferramentas</h2>
-            <p class="text-xl text-brand-text/70 max-w-3xl mx-auto font-medium">Tecnologias utilizadas na execução e entrega dos meus serviços.</p>
+            <h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Meus Serviços</h2>
+            <p class="text-xl text-brand-text/70 max-w-4xl mx-auto font-medium">Soluções completas para atender suas necessidades e otimizar seus resultados. </p>
             <div class="w-24 h-1 bg-brand-purple mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div class="ferramenta-grid grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+        <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-purple/10 mb-12">
             
-            <div class="text-center">
-                <img src="icones/microsoftoffice.png" alt="Microsoft Office Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">Microsoft Office</p>
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-12 bg-brand-purple rounded-xl flex items-center justify-center text-white text-xl mr-4">
+                    ✍️
+                </div>
+                <h3 class="text-2xl font-bold text-brand-purple font-display">Comunicação & Conteúdo</h3>
             </div>
 
-            <div class="text-center">
-                <img src="icones/ferramentasdogoogle.png" alt="Ferramentas do Google Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">Ferramentas do Google</p>
-            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-8">
+                
+                <div class="lg:border-r border-gray-300 pr-6">
+                    <h5 class="font-semibold text-brand-text mb-1 text-lg">1️⃣ Redação, Revisão & Edição</h5>
+                    <p class="text-brand-text/80 text-sm">Criação e aperfeiçoamento de textos com foco na qualidade.</p>
+                </div>
 
-            <div class="text-center">
-                <img src="icones/notion.png" alt="Notion Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">Notion</p>
-            </div>
-            
-            <div class="text-center">
-                <img src="icones/canva.png" alt="Canva Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">Canva</p>
-            </div>
-            
-            <div class="text-center">
-                <img src="icones/whatsappbusiness.png" alt="WhatsApp Business Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">WhatsApp Business</p>
-            </div>
-            
-            <div class="text-center">
-                <img src="icones/instagram.png" alt="Instagram Logo" class="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 opacity-80 hover:opacity-100 transition duration-300">
-                <p class="text-xs font-semibold text-brand-text/90">Instagram</p>
-            </div>
+                <div class="lg:border-r border-gray-300 pr-6">
+                    <h5 class="font-semibold text-brand-text mb-1 text-lg">2️⃣ Transcrição de Áudio</h5>
+                    <p class="text-brand-text/80 text-sm">Conversão precisa de áudio para texto.</p>
+                </div>
 
+                <div class="lg:border-r border-gray-300 pr-6">
+                    <h5 class="font-semibold text-brand-text mb-1 text-lg">3️⃣ Tradução EN/PT</h5>
+                    <p class="text-brand-text/80 text-sm">Tradução de textos mantendo o contexto original.</p>
+                </div>
+                
+                <div class="h-full flex flex-col justify-between lg:border-r border-gray-300 pr-6">
+                    <div>
+                        <h5 class="font-semibold text-brand-text mb-1 text-lg">4️⃣ Roteiros p/ Audiovisual</h5>
+                        <p class="text-brand-text/80 text-sm">Criação de roteiros e storytelling criativo.</p>
+                    </div>
+                    <span class="bg-brand-purple text-white text-xs px-2 py-1 rounded-full font-bold mt-4 inline-block self-start">Em desenvolvimento</span>
+                </div>
+                
+                <div class="h-full flex flex-col justify-between">
+                    <div>
+                        <h5 class="font-semibold text-brand-text mb-1 text-lg">5️⃣ Copywriting</h5>
+                        <p class="text-brand-text/80 text-sm">Textos persuasivos e estratégicos usando SEO para impulsionar seu alcance.</p>
+                    </div>
+                    <span class="bg-brand-purple text-white text-xs px-2 py-1 rounded-full font-bold mt-4 inline-block self-start">Em desenvolvimento</span>
+                </div>
+
+            </div>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
+            
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-purple/10 h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-purple rounded-xl flex items-center justify-center text-white text-xl mr-4">
+                        ✈️
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-purple font-display">Turismo & Viagens</h3>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-3 text-brand-text/90">6️⃣ Consultoria de Viagem</h4>
+                    <p class="text-brand-text/80 leading-relaxed text-base">Planejamento completo e assistência do início ao fim. Inclui roteiro personalizado alinhado às suas preferências, Guia Digital exclusivo (roteiro detalhado, checklist de viagem, informações culturais, dicas, logística e cotações de voos/reservas) e suporte virtual antes e durante a sua viagem. </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-purple/10 h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-purple rounded-xl flex items-center justify-center text-white text-xl mr-4">
+                        🧑‍💼
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-purple">Gestão & Relacionamento</h3>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h5 class="font-semibold text-brand-text mb-1 text-lg">7️⃣ Assistência Virtual</h5>
+                        <p class="text-brand-text/80">Gestão das suas demandas administrativas, permitindo que você foque no que realmente importa.</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-brand-text mb-1 text-lg">8️⃣ Gestão de Comunidade</h5>
+                        <p class="text-brand-text/80">Gestão das interações nas redes sociais, fortalecendo o engajamento e a sua presença digital.</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-brand-text mb-1 text-lg">9️⃣ Atendimento ao Cliente</h5>
+                        <p class="text-brand-text/80">Atendimento humanizado, personalizado e eficiente por canais online.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-purple/10">
+            
+            <div class="flex items-center justify-center mb-10">
+                <h4 class="text-3xl font-bold text-brand-purple font-display">Ferramentas</h4>
+            </div>
+
+            <div class="ferramenta-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"> 
+                
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/microsoftoffice.png" alt="Microsoft Office Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110"> 
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">MS Office</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Outlook, Excel, Word, Powerpoint e outros.</p>
+                </div>
+
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/ferramentasdogoogle.png" alt="Ferramentas do Google Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110"> 
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">Ferramentas Google</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Drive, Forms, Agenda e outros.</p>
+                </div>
+
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/notion.png" alt="Notion Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110">
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">Notion</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Planejamento e Organização.</p>
+                </div>
+
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/canva.png" alt="Canva Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110">
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">Canva</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Criação rápida de visuais.</p>
+                </div>
+
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/whatsappbusiness.png" alt="WhatsApp Business Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110">
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">WhatsApp Business</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Comunicação e Atendimento.</p>
+                </div>
+
+                <div class="group flex flex-col items-center justify-center p-4 bg-brand-cream/70 rounded-xl border-2 border-transparent hover:border-brand-purple transition duration-500 transform hover:-translate-y-1 shadow-md">
+                    <img src="icones/instagram.png" alt="Instagram Logo" class="w-12 h-12 mb-2 transition duration-300 group-hover:scale-110">
+                    <p class="font-bold text-brand-purple text-sm text-center mt-1">Instagram</p>
+                    <p class="text-xs text-brand-text/70 text-center mt-1">Comunidade e Presença Digital.</p>
+                </div>
+            </div>
+            
+        </div>
+        
     </div>
 </section>
 
-<section id="projetos" class="section-padding bg-cream">
+<section id="projetos" class="section-padding bg-white">
 <div class="container-custom">
 <div class="text-center mb-16">
-<h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Projetos</h2>
-<p class="text-xl text-brand-text/70 max-w-3xl mx-auto font-medium">Acompanhe e conheça mais o meu trabalho</p>
+<h2 class="text-4xl md:text-5xl font-display font-black text-brand-purple mb-4">Meus Projetos</h2>
+
 <div class="w-24 h-1 bg-brand-purple mx-auto mt-6 rounded-full"></div>
 </div>
 
@@ -511,7 +559,7 @@ Consultoria de Viagem • Criação de Conteúdo <br> Escrita criativa • Gest�
 </a>
 </div>
 
-<div class="bg-white p-8 rounded-3xl card-hover text-center border border-brand-purple/30 shadow-lg">
+<div class="bg-brand-cream p-8 rounded-3xl card-hover text-center border border-brand-purple/30 shadow-lg">
 <div class="w-20 h-20 bg-brand-transparent rounded-2xl flex items-center justify-center text-brand-purple text-3xl mx-auto mb-6">
 📝
 </div>
